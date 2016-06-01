@@ -94,15 +94,6 @@ public class CSVAuditLoggerTest
 
         Assert.assertTrue(true);
 
-        // Writing the logs to auditQ is taking some time, so waiting for 100 here
-        try
-        {
-            Thread.sleep(100); // 100 milliseconds is one second.
-        }
-        catch (InterruptedException ex)
-        {
-            Thread.currentThread().interrupt();
-        }
 
         file = new File(Constants.CSV_AUDIT_FILES_NAME);
 

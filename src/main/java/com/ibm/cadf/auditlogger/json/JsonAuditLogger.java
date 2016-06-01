@@ -17,7 +17,6 @@
 package com.ibm.cadf.auditlogger.json;
 
 import java.io.BufferedWriter;
-import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -61,13 +60,7 @@ public class JsonAuditLogger extends AuditLogger
         FileReader fr = null;
         try
         {
-            // Create a directory if it doesn't exists
             String filePath = getOutputFilePath();
-//            File dir = new File(filePath);
-//            if (!dir.exists())
-//            {
-//                dir.mkdirs();
-//            }
             fw = new FileWriter(filePath, true);
             fr = new FileReader(filePath);
             writer = new BufferedWriter(fw);

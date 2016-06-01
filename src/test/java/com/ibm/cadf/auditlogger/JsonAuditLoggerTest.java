@@ -80,15 +80,6 @@ public class JsonAuditLoggerTest
         event.addMeasurement(measurement1);
         event.addMeasurement(measurement2);
         auditLogger.audit(event);
-        // Writing the logs to auditQ is taking some time, so waiting for 100 here
-        try
-        {
-            Thread.sleep(100); // 100 milliseconds is one second.
-        }
-        catch (InterruptedException ex)
-        {
-            Thread.currentThread().interrupt();
-        }
 
     }
 
